@@ -26,41 +26,6 @@ const apiData = (url, time) => {
   });
 };
 
-// apiData("/users", 2000)
-//   .then((data) => {
-//     console.log(data);
-//     data.forEach((user) => {
-//       return apiData(`/user/${user.id}`, 2000)
-//         .then((data) => {
-//           console.log(data);
-//           return data.postId;
-//         }, 2000)
-//         .then((data) => {
-//           console.log(data);
-//           data.forEach((postId) => {
-//             return apiData(`/post/${postId}`, 2000).then((data) => {
-//               console.log(data);
-//               postArr.push(data);
-//               for (let i = 0; i < postArr.length; i++) {
-//                 for (let k = 0; k < postArr.length; k++) {
-//                   if (i !== k) {
-//                     if (postArr[i].title !== postArr[k].title) {
-//                       let post = async () => {
-//                         await render(`<h1>${postArr[i].title}</h1>`, 1000);
-//                       };
-//                     }
-//                   }
-//                 }
-//               }
-//             }, 2000);
-//           });
-//         }, 2000);
-//     });
-//   }, 2000)
-//   .catch(() => {
-//     console.log("page 404");
-//   });
-
 let render = async () => {
   let users = await apiData("/users", 1000);
   console.log(users);
