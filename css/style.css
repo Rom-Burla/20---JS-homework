@@ -1,0 +1,19 @@
+body{
+    text-align: center;
+}
+.title{
+    font-weight: 700;
+}
+.user-name{
+    text-decoration: underline;
+    color: darkturquoise;
+}
+.user-name:hover{
+    color: rgb(6, 156, 158);
+}
+.content{
+    font-family: cursive;
+    font-weight: 700;
+    border-bottom: 1px solid;
+    padding-bottom: 20px;
+}
